@@ -8,4 +8,12 @@
 
     // your code here
 
+    let now = new Date();
+
+    if (now.getHours() < 18) {
+        document.getElementById("target").innerHTML = "Hello";
+    } else {
+        document.getElementById("target").innerHTML = "Good evening";
+    }
+
 })();

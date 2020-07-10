@@ -33,4 +33,8 @@
 
     // your code here
 
+    document.getElementById("run").addEventListener("click", function () {
+        people.forEach(x => console.log(x.firstname));
+    })
+
 })();

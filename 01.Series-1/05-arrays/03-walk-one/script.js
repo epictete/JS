@@ -20,4 +20,10 @@
 
     // your code here
 
+    document.getElementById("run").addEventListener("click", function () {
+        for (x of fruits) {
+            console.log(x);
+        }
+    })
+
 })();

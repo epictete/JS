@@ -34,8 +34,9 @@
 
     document.getElementById("run").addEventListener("click", function () {
 
-        const randBird = Math.floor(Math.random() * birds.length + 1);
-        const randAdj = Math.floor(Math.random() * adjectives.size + 1);
+        const randBird = Math.floor(Math.random() * birds.length);
+        const randAdj = Math.floor(Math.random() * adjectives.size);
+
         if (birds[randBird].fem) {
             document.getElementById("target").innerHTML = "La " + birds[randBird].name + " " + [...adjectives][randAdj] + "e";
         } else {

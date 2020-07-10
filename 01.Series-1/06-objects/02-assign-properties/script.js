@@ -26,13 +26,14 @@
         computers.forEach(item => check(item));
 
         function check(item) {
-            if (item.available == undefined) {
+
+            if (!item.hasOwnProperty("available")) {
                 item.available = defaultProps.available;
             }
-            if (item.os == undefined) {
+            if (!item.hasOwnProperty("os")) {
                 item.os = defaultProps.os;
             }
-            if (item.user == undefined) {
+            if (!item.hasOwnProperty("user")) {
                 item.user = defaultProps.user;
             }
         }

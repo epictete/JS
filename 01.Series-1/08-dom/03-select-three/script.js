@@ -5,4 +5,9 @@
 
     // your code here
 
+    const target = document.querySelectorAll(".target");
+    for (x of target) {
+        x.innerHTML = "owned";
+    }
+
 })();

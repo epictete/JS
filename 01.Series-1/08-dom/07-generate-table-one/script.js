@@ -5,4 +5,11 @@
 
     // your code here
 
+    const target = document.getElementById("target");
+    const newTable = document.createElement("table");
+    target.appendChild(newTable);
+    for (let i = 0; i < 10; i++) {
+        newTable.insertRow(0).insertCell(0);
+    }
+
 })();

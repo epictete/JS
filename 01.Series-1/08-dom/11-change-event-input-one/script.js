@@ -5,4 +5,10 @@
 
     // your code here
 
+    document.getElementById("run").addEventListener("compositionupdate", () => {
+        let pass1 = document.getElementById("pass-one");
+        let counter = document.getElementById("counter");
+        counter.innerHTML = `${event.data}/10`;
+    })
+
 })();

@@ -5,10 +5,12 @@
 
     // your code here
 
-    document.getElementById("run").addEventListener("compositionupdate", () => {
-        let pass1 = document.getElementById("pass-one");
-        let counter = document.getElementById("counter");
-        counter.innerHTML = `${event.data}/10`;
+    let pass1 = document.getElementById("pass-one");
+    let counter = document.getElementById("counter");
+
+    pass1.addEventListener("input", () => {
+        pass1.setAttribute("maxlength", 10);
+        counter.innerText = pass1.value.length + "/10";
     })
 
 })();

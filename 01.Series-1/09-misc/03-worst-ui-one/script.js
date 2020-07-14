@@ -5,4 +5,16 @@
 
     // your code here
 
+    let slider = document.getElementById("slider");
+    let target = document.getElementById("target");
+
+    slider.oninput = function () {
+        myFunction();
+    };
+
+    function myFunction() {
+        let val = slider.value;
+        target.innerHTML = "0" + val;
+    }
+
 })();

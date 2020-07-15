@@ -5,4 +5,18 @@
 
     // your code here
 
+    let target = document.getElementById("target");
+    let counter = 0;
+
+    document.getElementById("increment").addEventListener("click", () => {
+
+        if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount) + 1;
+        } else {
+            localStorage.clickcount = 1;
+        }
+
+        target.innerHTML = localStorage.clickcount;
+    })
+
 })();

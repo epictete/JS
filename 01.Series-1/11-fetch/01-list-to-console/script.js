@@ -3,4 +3,11 @@
 
 (() => {
     // your code here
+
+    document.getElementById("run").addEventListener("click", async () => {
+        const heroes = await fetch('http://localhost:3000/heroes');
+        const data = await heroes.json();
+        console.log(data);
+    })
+
 })();

@@ -5,10 +5,10 @@
     // your code here
 
     document.getElementById("run").addEventListener("click", () => {
-        window.lib.getPersons().then((valeur) => {
-            console.log(valeur);
-        }, (raison) => {
-            console.error(raison);
+        window.lib.getPersons().then((persons) => {
+            console.log(persons);
+        }).catch((error) => {
+            console.error(error);
         })
     })
 

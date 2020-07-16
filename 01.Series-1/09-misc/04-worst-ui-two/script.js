@@ -11,10 +11,8 @@
     let four = document.getElementById("part-four");
     let target = document.getElementById("target");
 
-    one.addEventListener("click", updateUI);
-    two.addEventListener("click", updateUI);
-    three.addEventListener("click", updateUI);
-    four.addEventListener("click", updateUI);
+    let buttonArray = Array.from(document.querySelectorAll("button"));
+    buttonArray.forEach(elem => { elem.addEventListener("click", updateUI) });
 
     function updateUI() {
         let current = event.currentTarget;
@@ -26,7 +24,8 @@
         value < 10 ? value = "0" + value : value = value;
 
         current.innerHTML = value;
-        target.innerHTML = "+" + one.innerHTML + two.innerHTML + three.innerHTML + four.innerHTML;
+        target.innerHTML = `+${one.innerHTML}${two.innerHTML}${three.innerHTML}${four.innerHTML}`;
+
     }
 
 })();

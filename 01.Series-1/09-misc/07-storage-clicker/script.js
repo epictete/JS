@@ -6,7 +6,6 @@
     // your code here
 
     let target = document.getElementById("target");
-    let counter = 0;
 
     document.getElementById("increment").addEventListener("click", () => {
 

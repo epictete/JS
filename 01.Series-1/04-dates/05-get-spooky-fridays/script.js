@@ -6,9 +6,9 @@
 
     // your code here
 
-    document.getElementById("run").addEventListener("click", function () {
-        var year = document.getElementById("year").value;
-        var counter = [];
+    document.getElementById("run").addEventListener("click", () => {
+        const year = document.getElementById("year").value;
+        let counter = [];
 
         for (let month = 0; month < 12; month++) {
             let date = new Date(year, month, 13);

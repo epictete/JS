@@ -4,10 +4,10 @@
 (() => {
     // to get the value of an input: document.getElementById("element-id").value
 
-    const performOperation = operation => {
+    function calc(operation) {
 
-        let num1 = parseInt(document.getElementById("op-one").value, 10);
-        let num2 = parseInt(document.getElementById("op-two").value, 10);
+        let num1 = Number(document.getElementById("op-one").value);
+        let num2 = Number(document.getElementById("op-two").value);
 
         switch (operation) {
             case "addition":
@@ -27,8 +27,7 @@
 
     Array.from(document.querySelectorAll("button.operator")).forEach($btn =>
         $btn.addEventListener(
-            "click",
-            () => (performOperation($btn.id), false),
-        ),
+            "click", () => (calc($btn.id))
+        )
     );
 })();

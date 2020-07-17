@@ -6,20 +6,14 @@
 
     // your code here
 
-    document.getElementById("red").addEventListener("click", function () {
-        document.body.style.backgroundColor = "red";
-    })
+    Array.from(document.querySelectorAll("button")).forEach($btn =>
+        $btn.addEventListener(
+            "click", () => changeBg($btn.id)
+        )
+    );
 
-    document.getElementById("green").addEventListener("click", function () {
-        document.body.style.backgroundColor = "green";
-    })
-
-    document.getElementById("yellow").addEventListener("click", function () {
-        document.body.style.backgroundColor = "yellow";
-    })
-
-    document.getElementById("blue").addEventListener("click", function () {
-        document.body.style.backgroundColor = "blue";
-    })
+    function changeBg(id) {
+        document.body.style.backgroundColor = id;
+    }
 
 })();

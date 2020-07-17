@@ -25,7 +25,7 @@
         console.log(person1.name);
 
         person1.name = "Sam Smith";
-        console.log(person1.firstname + " " + person1.lastname);
+        console.log(`${person1.firstname} ${person1.lastname}`);
 
     })
 

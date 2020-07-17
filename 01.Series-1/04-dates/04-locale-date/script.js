@@ -9,6 +9,6 @@
     // your code here
     const now = new Date();
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' };
-    document.getElementById("target").innerHTML = now.toLocaleDateString('en-US', options);;
+    document.getElementById("target").innerHTML = now.toLocaleDateString('en-US', options);
 
 })();

@@ -82,10 +82,13 @@
 
     // your code here
 
-    document.getElementById("run").addEventListener("click", function () {
-        const search = (elem) => elem.firstname == "Jean" && elem.lastname == "Dupont";
-        console.log(people.find(search).email);
-        console.log(people.findIndex(search));
-    })
+    document.getElementById("run").addEventListener("click", search(elem));
+
+    function search(elem) {
+        if (elem.firstname == "Jean" && elem.lastname == "Dupont") {
+            console.log(people.find(search).email);
+            console.log(people.findIndex(search));
+        };
+    }
 
 })();

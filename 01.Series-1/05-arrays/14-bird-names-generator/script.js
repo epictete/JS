@@ -32,15 +32,16 @@
 
     // your code here
 
-    document.getElementById("run").addEventListener("click", function () {
+    document.getElementById("run").addEventListener("click", () => {
 
         const randBird = Math.floor(Math.random() * birds.length);
         const randAdj = Math.floor(Math.random() * adjectives.size);
+        const target = document.getElementById("target");
 
         if (birds[randBird].fem) {
-            document.getElementById("target").innerHTML = "La " + birds[randBird].name + " " + [...adjectives][randAdj] + "e";
+            target.innerHTML = `La ${birds[randBird].name} ${[...adjectives][randAdj]}e`;
         } else {
-            document.getElementById("target").innerHTML = "Le " + birds[randBird].name + " " + [...adjectives][randAdj];
+            target.innerHTML = `Le ${birds[randBird].name} ${[...adjectives][randAdj]}`;
         }
     })
 

@@ -5,8 +5,8 @@
 
     // your code here
 
-    var image = document.querySelector(".material img");
-    var source = image.getAttribute("data-hover");
+    const image = document.querySelector(".material img");
+    const source = image.getAttribute("data-hover");
 
     image.addEventListener("mouseover", () => {
         image.setAttribute("src", source);

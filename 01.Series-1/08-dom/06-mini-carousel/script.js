@@ -17,10 +17,8 @@
     let x = 0;
 
     document.getElementById("next").addEventListener("click", () => {
-
         x === gallery.length - 1 ? x = 0 : x++;
-        image.setAttribute("src", gallery[x])
-
+        image.setAttribute("src", gallery[x]);
     })
 
 })();

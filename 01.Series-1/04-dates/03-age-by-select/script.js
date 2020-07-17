@@ -5,7 +5,7 @@
 (() => {
 
     // your code here
-    document.getElementById("run").addEventListener("click", function () {
+    document.getElementById("run").addEventListener("click", () => {
         let day = document.getElementById("dob-day").value;
         let month = document.getElementById("dob-month").value;
         let year = document.getElementById("dob-year").value;

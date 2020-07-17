@@ -8,12 +8,12 @@
 
     // your code here
 
-    let now = new Date();
+    let target = document.getElementById("target")
 
-    if (now.getHours() < 18) {
-        document.getElementById("target").innerHTML = "Hello";
+    if (new Date().getHours() < 18) {
+        target.innerHTML = "Hello";
     } else {
-        document.getElementById("target").innerHTML = "Good evening";
+        target.innerHTML = "Good evening";
     }
 
 })();

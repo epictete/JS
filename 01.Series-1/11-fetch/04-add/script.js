@@ -5,31 +5,38 @@
     // your code here
 
     class Hero {
-        constructor(name, alterEgo, powers) {
+        constructor(name, alterEgo, abilities) {
             this.name = name;
             this.alterEgo = alterEgo;
-            this.powers = powers;
+            this.abilities = abilities;
         }
     }
 
-    let heroes = [];
+    const name = document.getElementById("hero-name");
+    const alterEgo = document.getElementById("hero-alter-ego");
+    const abilities = document.getElementById("hero-powers");
 
-    document.getElementById("run").addEventListener("click", () => {
+    document.getElementById("run").addEventListener("click", async () => {
 
-        const name = document.getElementById("hero-name");
-        const alterEgo = document.getElementById("hero-alter-ego");
-        const powers = document.getElementById("hero-powers");
-
-        if (name.value === "" || alterEgo.value === "" || powers.value === "") {
+        if (name.value === "" || alterEgo.value === "" || abilities.value === "") {
             alert("Please fill in every field");
         } else {
-            let powersArray = powers.value.split(",");
-            console.log(powersArray);
+            let powersArray = abilities.value.split(",");
             let newHero = new Hero(name.value, alterEgo.value, powersArray);
-            heroes.push(newHero);
-            console.log(heroes);
-        }
 
+            const rawResponse = await fetch('http://localhost:3000/heroes', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(newHero)
+            });
+
+            const content = await rawResponse.json();
+
+            console.log(content);
+        }
     });
 
 })();

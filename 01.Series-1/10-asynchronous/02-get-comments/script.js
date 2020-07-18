@@ -4,13 +4,15 @@
 (() => {
     // your code here
 
-    document.getElementById("run").addEventListener("click", () => {
-        window.lib.getPosts((error, array) => {
-            array.forEach(element => window.lib.getComments(element["id"], (error, comments) => {
-                element.comments = comments;
-                console.log(element);
-            }))
-        })
-    })
+    document.getElementById("run").addEventListener("click", () =>
+        window.lib.getPosts((error, array) =>
+            array.forEach(element =>
+                window.lib.getComments(element.id, (error, comments) =>
+                    element.comments = comments,
+                    console.log(element)
+                )
+            )
+        )
+    )
 
 })();

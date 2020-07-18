@@ -5,16 +5,12 @@
 
     // your code here
 
-    let slider = document.getElementById("slider");
-    let target = document.getElementById("target");
+    const slider = document.getElementById("slider");
+    const target = document.getElementById("target");
 
-    slider.oninput = function () {
-        myFunction();
+    slider.oninput = () => {
+        const val = slider.value;
+        target.innerHTML = `0${val}`;
     };
-
-    function myFunction() {
-        let val = slider.value;
-        target.innerHTML = "0" + val;
-    }
 
 })();

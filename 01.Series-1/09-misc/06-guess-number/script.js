@@ -8,8 +8,7 @@
 
     function welcome() {
         const x = Math.floor(Math.random() * 100 + 1);
-        console.log(x);
-        let num = prompt("Please guess a number between 1 and 100 :");
+        const num = prompt(`Please guess a number between 1 and 100 :`);
         guess(x, num);
     }
 
@@ -17,10 +16,10 @@
         let y = 1;
         while (num != x) {
             if (num > x) {
-                num = prompt("Too high, pleaase try again :");
+                num = prompt(`Too high, pleaase try again :`);
                 y += 1;
             } else if (num < x) {
-                num = prompt("Too low, please try again :");
+                num = prompt(`Too low, please try again :`);
                 y += 1;
             }
         }

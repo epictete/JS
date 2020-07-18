@@ -21,8 +21,8 @@
         if (name.value === "" || alterEgo.value === "" || abilities.value === "") {
             alert("Please fill in every field");
         } else {
-            let powersArray = abilities.value.split(",");
-            let newHero = new Hero(name.value, alterEgo.value, powersArray);
+            const powersArray = abilities.value.split(",");
+            const newHero = new Hero(name.value, alterEgo.value, powersArray);
 
             const rawResponse = await fetch('http://localhost:3000/heroes', {
                 method: 'POST',

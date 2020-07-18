@@ -4,30 +4,33 @@
 
     // your code here
 
-    let buttonArray = Array.from(document.querySelectorAll("button"));
-    buttonArray.forEach(elem => elem.addEventListener("click", () => updateUI(elem.id)));
+    Array.from(document.querySelectorAll("button")).forEach($btn =>
+        $btn.addEventListener(
+            "click", () => updateUI($btn.id)
+        )
+    );
 
     function updateUI(id) {
-        let input = document.getElementById(id.slice(4));
-        let min = Number(input.getAttribute("data-min"));
-        let max = Number(input.getAttribute("data-max"));
+        const input = document.getElementById(id.slice(4));
+        const min = Number(input.getAttribute("data-min"));
+        const max = Number(input.getAttribute("data-max"));
 
         input.value = rand(min, max);
         result();
     }
 
     function result() {
-        let one = document.getElementById("part-one").value;
-        let two = document.getElementById("part-two").value;
-        let three = document.getElementById("part-three").value;
-        let four = document.getElementById("part-four").value;
+        const one = document.getElementById("part-one").value;
+        const two = document.getElementById("part-two").value;
+        const three = document.getElementById("part-three").value;
+        const four = document.getElementById("part-four").value;
+        const target = document.getElementById("target");
 
-        let target = document.getElementById("target");
         target.innerHTML = `+${one}${two}${three}${four}`;
     }
 
     function rand(min, max) {
-        let rand = Math.floor(Math.random() * (max - min) + 1) + min;
+        const rand = Math.floor(Math.random() * (max - min) + 1) + min;
         return rand < 10 ? `0${rand}` : rand;
     }
 

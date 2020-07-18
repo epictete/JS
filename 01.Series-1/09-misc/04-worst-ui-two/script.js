@@ -11,14 +11,15 @@
     const four = document.getElementById("part-four");
     const target = document.getElementById("target");
 
-    Array.from(document.querySelectorAll("button")).forEach(btn =>
-        btn.addEventListener(
-            "click", updateUI
-        )
+    Array.from(document.querySelectorAll("button")).forEach($btn =>
+        $btn.addEventListener(
+            "click",
+            () => (updateUI($btn.id), false),
+        ),
     );
 
-    function updateUI() {
-        const current = event.currentTarget;
+    function updateUI(id) {
+        const current = document.getElementById(id);
         const min = Number(current.getAttribute("data-min"));
         const max = Number(current.getAttribute("data-max"));
         let value = Number(current.innerHTML);

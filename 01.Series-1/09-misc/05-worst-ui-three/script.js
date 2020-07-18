@@ -6,8 +6,9 @@
 
     Array.from(document.querySelectorAll("button")).forEach($btn =>
         $btn.addEventListener(
-            "click", () => updateUI($btn.id)
-        )
+            "click",
+            () => (updateUI($btn.id), false),
+        ),
     );
 
     function updateUI(id) {
